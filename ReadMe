@@ -1,0 +1,67 @@
+# 🔐 Chashini: Secure Retail Data Collaboration using Confidential Computing
+
+**Chashini** is a proof-of-concept (PoC) platform designed to enable **secure, privacy-preserving data collaboration and analytics for the retail industry**, powered by **Confidential Computing (CC)**. It allows multiple retailers to perform joint analysis on encrypted datasets without exposing raw data — even during computation.
+
+---
+
+## 🚀 Overview
+
+Traditional encryption protects data at rest and in transit but fails during **active processing**, leaving data vulnerable. **Chashini** solves this using **hardware-based Trusted Execution Environments (TEEs)** to keep data encrypted **even while being processed** — enabling zero-trust, collaborative analytics across organizations.
+
+---
+
+## 🧩 Key Features
+
+- ✅ **Secure Data Ingestion** — Encrypted retail data is loaded directly into isolated TEEs.
+- 🔍 **Privacy-Preserving Analytics** — Supports analytics like fraud detection, customer segmentation, and joint trend analysis within TEEs.
+- 🛡️ **Hardware-Enforced Privacy** — Uses Intel SGX, AMD SEV/TDX, or Arm CCA for secure enclaves.
+- 🔐 **Attestation & Trust Verification** — Ensures execution in genuine, untampered environments.
+- 🤝 **Multi-Party Collaboration** — Enables multiple retailers to run joint analytics without exposing individual datasets.
+- 📊 **Tool Compatibility** — Compatible with Python, NumPy, Pandas, Spark, and other popular analytics tools.
+- 📜 **Regulatory Compliance** — Helps meet GDPR, CCPA, and India’s DPDP Act requirements with cryptographic guarantees.
+- 💡 **Protection of Business Logic** — Proprietary algorithms remain confidential, even from the host/cloud provider.
+
+---
+
+## ⚙️ How It Works
+
+1. **Data Preparation**  
+   Each retailer encrypts sensitive datasets (e.g., customer IDs, transactions) using shared or public-key encryption.
+
+2. **Launch Trusted Execution Environment**  
+   A confidential VM or enclave is provisioned and attested for integrity verification.
+
+3. **Secure Data Ingestion**  
+   Decryption keys are securely provisioned, and data is decrypted only within the TEE.
+
+4. **Run Analytics in TEE**  
+   Analytical models or queries are executed within the secure enclave with strict controls.
+
+5. **Secure Output Generation**  
+   Only anonymized, aggregated, or re-encrypted results are exported — signed by the enclave's attestation key.
+
+6. **Verification & Retrieval**  
+   Participants verify the attestation report and retrieve the secure, trusted result.
+
+---
+
+## 🧪 Example Use Cases
+
+- 🔍 Cross-retailer fraud detection
+- 🛒 Personalized recommendation generation
+- 📈 Joint market trend analytics
+- 🧼 Data clean rooms for secure collaboration
+
+---
+
+## 🧰 Tech Stack
+
+- **Confidential Computing Hardware**: Intel SGX, AMD SEV/TDX, Arm CCA
+- **Cloud Providers**: Azure Confidential VMs, Google Confidential Cloud, AWS Nitro Enclaves
+- **Languages & Tools**: Python, Pandas, NumPy, Spark (inside TEE-compatible environments)
+- **Security**: Remote attestation, memory encryption, workload identity provisioning
+
+---
+
+## 📄 Folder Structure (Suggested)
+
